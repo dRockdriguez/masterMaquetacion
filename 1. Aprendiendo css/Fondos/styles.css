@@ -1,0 +1,27 @@
+body {
+    background-color: #ccc;
+    background-image: url(imgs/background1.jpg);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: left bottom;
+}
+
+#caja {
+    background-color: rgb(133, 133, 231);
+    background-image: url(imgs/background.jpg);
+    background-size: 100%;
+    border: 1px solid black;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: overline;
+}
+
+p {
+    font-weight: bold;
+    line-height: 20px;
+    text-indent: 50px;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+}

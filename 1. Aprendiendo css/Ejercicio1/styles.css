@@ -1,0 +1,130 @@
+/*
+1. Crear documento html y linkarlo con css
+2. Estructura con Cabecera, contenedor principal, sidebar, sección de contenido principal, footer
+3. Todo el contenido debe estar dentro del contenedor principal, ancho 1200px
+4. Header debe ocupar todo el ancho y texto centrado
+5. Menú con elementos en linea
+6. El contenido principal con ancho del 70%
+7. El contenido debe ser una cuadrícula con 4 filas y 2 columnas
+8. El sidebar 30% de ancho
+9. El footer 100% de ancho y abajo del todo
+*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    padding: 20px;
+}
+
+#principal {
+    border: 1px solid #ccc;
+    margin: 0px auto;
+    width: 1200px;
+}
+
+header {
+    background: lightblue;
+    min-width: 100%;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    width: 100%;
+}
+
+nav ul {
+    background-color: #ccc;
+}
+
+nav ul li {
+    border-right: 1px solid black;
+    cursor: pointer;
+    display: inline-block;
+}
+
+nav ul li:hover {
+    background-color: lightblue;
+}
+
+nav ul li a {
+    color: #444444;
+    display: block;
+    padding: 10px;
+}
+
+nav ul li:hover a {
+    color: white
+}
+
+#center {
+    height: 1000px;
+    display: flex;
+}
+
+#container {
+    width: 70%;
+    min-width: 70%;
+    max-width: 70%;
+}
+
+aside {
+    width: 30%;
+    max-width: 30%;
+    min-width: 30%;
+    overflow: scroll;
+}
+
+#container .caja {
+    background-color: #ccc;
+    border: 1px solid gray;
+    border-radius: 5px;
+    float: left;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    margin: 10px;
+    width: 40%;
+    box-shadow: 3px 3px 5px gray;
+}
+
+#container .caja:hover {
+    box-shadow: 1px 1px 3px gray inset;
+}
+
+footer {
+    background-color: #eee;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.libre {
+    top: 0;
+    left: 50%;
+    position: absolute;
+    border: 1px solid black;
+    background-color: red;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+}
+
+.fija {
+    position: fixed;
+    background-color: blue;
+    top: 50%;
+    left: 0;
+    border: 1px solid black;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+}

@@ -1,0 +1,22 @@
+@font-face {
+    font-family: DancingScript;
+    src: url(fonts/static/DancingScript-Regular.ttf);
+}
+
+h1 {
+    font-family: DancingScript, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-style: italic;
+}
+
+h3 {
+    font-family: "Comic Sans MS";
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
