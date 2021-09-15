@@ -6,6 +6,21 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "fjalla";
+    src: url("fonts/FjallaOne-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'icons';
+    src: url('fonts/websymbols-regular-webfont.eot');
+    src: url('fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/websymbols-regular-webfont.woff') format('woff'), url('fonts/websymbols-regular-webfont.ttf') format('truetype'), url('fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     padding: 0px;
     margin: 0px;
@@ -13,6 +28,79 @@
 
 body {
     background-image: url(../imgs/paven.png);
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+.icon {
+    font-family: icons;
+    float: left;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+
+.red {
+    color: #9b2422 !important;
+}
+
+.orange {
+    color: #d69d2a !important;
+}
+
+.blue {
+    color: #0c73f2 !important;
+}
+
+input[type="text"],
+input[type="password"] {
+    border: 1px solid #c9c9c9;
+    box-shadow: 0px 0px 2px #ccc inset;
+    background-color: white;
+    padding: 1px;
+    color: gray;
+    transition: all .3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border: 1px solid #70b231;
+    color: black;
+}
+
+input[type="submit"] {
+    display: block;
+    border-radius: 2px;
+    width: 60px;
+    padding: 3px;
+    background-color: #70b231;
+    border: 1px solid green;
+    cursor: pointer;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    box-shadow: 0px 0px 2px gray;
+}
+
+input[type="submit"]:active {
+    box-shadow: 0px 0px 3px gray inset;
+    text-shadow: 0px 0px 1px #ccc;
+}
+
+a {
+    color: #529125;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #285616;
+}
+
+a:visited {
+    color: #529125;
 }
 
 
@@ -64,7 +152,7 @@ header h1 a {
 
 /* MENU ------------------- */
 
-nav {
+#menu {
     min-width: 1250px;
     width: 100%;
     background-color: #333333;
@@ -75,30 +163,30 @@ nav {
     box-shadow: 0px 0px 2px gray;
 }
 
-nav ul {
+#menu ul {
     list-style: none;
     text-decoration: none;
     margin: 0px auto;
     width: 1060px;
 }
 
-nav>ul>li {
+#menu>ul>li {
     line-height: 40px;
     float: left;
     border-right: 1px solid gray;
 }
 
-nav>ul>li:hover {
+#menu>ul>li:hover {
     background-color: #70b231;
     box-shadow: 0px 0px 4px gray inset;
     transition: all .3s;
 }
 
-nav>ul>li a:first-child {
+#menu>ul>li a:first-child {
     border-left: 1px solid gray;
 }
 
-nav>ul>li a {
+#menu>ul>li a {
     color: white;
     text-decoration: none;
     display: block;
@@ -109,7 +197,7 @@ nav>ul>li a {
 
 /* DESPLEGABLE ----*/
 
-nav>ul>li>ul {
+#menu>ul>li>ul {
     display: none;
     position: absolute;
     width: 160px;
@@ -117,11 +205,11 @@ nav>ul>li>ul {
     z-index: 1;
 }
 
-nav>ul>li:hover>ul {
+#menu>ul>li:hover>ul {
     display: block;
 }
 
-nav>ul>li:hover>ul>li {
+#menu>ul>li:hover>ul>li {
     background-color: #f2f1f0;
     border-bottom: 1px solid #d6d6d6;
     padding: 8px;
@@ -130,12 +218,12 @@ nav>ul>li:hover>ul>li {
     transition: all .3s;
 }
 
-nav>ul>li:hover>ul>li a {
+#menu>ul>li:hover>ul>li a {
     color: #666;
     border: none;
 }
 
-nav>ul>li:hover>ul>li:hover {
+#menu>ul>li:hover>ul>li:hover {
     /* box-shadow: 0px 0px 6px #ccc inset;*/
     background-color: #ccc;
 }
@@ -180,5 +268,137 @@ nav>ul>li:hover>ul>li:hover {
     margin-bottom: 20px;
 }
 
+#content aside h3 {
+    display: block;
+    color: #333333;
+    width: 100%;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: #f2f3f2;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 10px;
+}
+
+
+/* FORMULARIOS ------------------- */
+
+#content aside .widget label,
+#content aside .widget input[type="text"],
+#content aside .widget input[type="password"],
+#content aside .widget a {
+    display: block;
+    width: 95%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#content aside .widget input[type="button"],
+#content aside .widget input[type="submit"] {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#content aside .widget input,
+#content aside .widget label {
+    margin: 0px auto;
+    text-align: center;
+}
+
+#content aside li {
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    list-style: square;
+}
+
+#frase {
+    width: 180px !important;
+    padding: 10px;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
 
 /* LATERAL ------------------- */
+
+
+/* CENTRAL ------------------- */
+
+#sections {
+    float: right;
+    width: 75%;
+    font-family: sans-serif, Arial, Helvetica;
+    margin-right: 20px;
+}
+
+#sections .titulo {
+    font-family: fjalla;
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-top: -20px;
+}
+
+#sections section {
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 4px #c9c9c9;
+    color: #333333;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+#sections article {
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#sections .date {
+    color: gray;
+    font-size: 14px;
+}
+
+#sections .firstSticker,
+#sections .secondSticker {
+    position: absolute;
+    margin-top: -38px;
+    z-index: 0;
+}
+
+#sections .secondSticker {
+    margin-left: 860px;
+}
+
+
+/* CENTRAL ------------------- */
+
+#history {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+footer {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 40px;
+    background-color: #333333;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px gray;
+}
