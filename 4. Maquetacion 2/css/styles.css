@@ -65,12 +65,47 @@ header {
     margin-left: 20px;
 }
 
+#logo:hover {
+    border-radius: 2px;
+    color: black;
+    background-color: #ccc;
+}
+
+#logo:hover .gear {
+    animation: fromBelow 500ms linear;
+}
+
+@keyframes fromBelow {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(200%);
+    }
+    100% {
+        transform: translateY(0%)
+    }
+}
+
 #logo .gear {
     display: block;
     float: left;
     font-size: 30px;
     margin-top: 6px;
     margin-left: 25px;
+    animation-name: rotate-gear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate-gear {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
 }
 
 #logo h3 {
@@ -80,6 +115,19 @@ header {
     margin-top: 6px;
     transition: all 300ms;
     margin-right: 65px;
+}
+
+#logo:hover h3 {
+    animation: fromRigth 500ms linear;
+}
+
+@keyframes fromRigth {
+    from {
+        transform: translateX(200%);
+    }
+    to {
+        transform: translateX(0%);
+    }
 }
 
 nav {
@@ -412,4 +460,76 @@ aside input[type="submit"] {
     color: #00538c;
     text-decoration: none;
     height: 100%;
+}
+
+footer {
+    width: 100%;
+    height: 470px;
+    background: black;
+    color: white;
+    overflow: hidden;
+}
+
+footer .wrap>div {
+    float: left;
+    width: 320px;
+    height: 370px;
+    text-align: center;
+    margin: 40px;
+    color: white;
+    font-family: trebuchet;
+}
+
+footer a {
+    text-decoration: none;
+    color: #37bcf9;
+    transition: all 300ms;
+}
+
+footer h5 {
+    display: block;
+    background: url(../imgs/pxgray.png), white;
+    height: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: bebas;
+    font-size: 40px;
+    line-height: 55px;
+    color: black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+footer ul {
+    text-align: left;
+    margin: 20px;
+    font-size: 25px;
+}
+
+footer ul li {
+    margin-top: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+footer ul li a {
+    display: block;
+    height: 40px;
+}
+
+footer iframe {
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 5px solid white;
+    box-shadow: 0px 0px 5px gray;
+}
+
+footer img {
+    margin-bottom: 15px;
+}
+
+footer #browsers img {
+    width: 45px;
 }
