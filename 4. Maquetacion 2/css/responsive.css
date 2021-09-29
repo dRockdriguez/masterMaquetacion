@@ -7,4 +7,43 @@
         width: 17%;
         margin: 1.4%;
     }
+    footer .wrap>div {
+        width: 24%;
+        margin: 4%;
+    }
+    footer #browsers img {
+        width: 25px;
+    }
+}
+
+@media (max-width: 1065px) {
+    #articles {
+        width: 60%;
+    }
+}
+
+@media (max-width: 960px) {
+    #articles {
+        width: 100%;
+        margin: 0px auto;
+    }
+    aside {
+        width: 100%;
+        float: none;
+        min-height: auto;
+        margin: 0px auto
+    }
+    aside input[type="text"] {
+        width: 94%;
+    }
+    footer {
+        height: auto;
+    }
+    footer .wrap>div {
+        width: 100%;
+        margin: 30px auto;
+    }
+    footer #browsers img {
+        width: 60px;
+    }
 }
