@@ -122,3 +122,73 @@ body {
 .layout-web ul li {
     flex-grow: 1;
 }
+
+.layout-web-areas {
+    height: 700px;
+    width: 90%;
+    display: grid;
+    border: 1px solid black;
+    margin: 0px auto;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 150px 70px 1fr 70px;
+    grid-template-areas: "header header header header header" "menu menu menu menu menu" "aside section section section section" "footer footer footer footer footer";
+    grid-row-gap: 4px;
+    grid-column-gap: 4px;
+}
+
+.layout-web-areas header {
+    grid-area: header;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+.layout-web-areas nav {
+    grid-area: menu;
+    background-color: blue;
+}
+
+.layout-web-areas section {
+    grid-area: section;
+    background-color: pink;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2px;
+}
+
+.layout-web-areas section article {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    background-color: #ccc;
+}
+
+.layout-web-areas aside {
+    grid-area: aside;
+    background-color: lightsalmon;
+}
+
+.layout-web-areas footer {
+    grid-area: footer;
+    background-color: lightsteelblue;
+}
+
+.layout-web-areas ul {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.layout-web-areas ul li {
+    flex-grow: 1;
+}
