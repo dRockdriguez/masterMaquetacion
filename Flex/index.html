@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        .container {
+            background-color: red;
+            box-sizing: border-box;
+            border: 10px solid rosybrown;
+            border-radius: 10px;
+            display: flex;
+            padding: 30px;
+            margin: 0 auto;
+            width: 100%;
+            height: 500px;
+            flex-flow: row wrap;
+            /*justify-content: center;
+            align-items: stretch;*/
+            /*align-content: space-between;*/
+            gap: 10px;
+        }
+        
+        .container div {
+            background-color: springgreen;
+            border: 5px solid violet;
+            border-radius: 10px;
+            padding: 10px;
+            flex-grow: 1;
+            flex: 1 1 100px
+        }
+        
+        .item-1 {
+            align-self: flex-end;
+        }
+        /*.item-1 {
+
+            flex-shrink: 1;
+            flex-basis: 200px;
+        }
+        
+        .item-2 {
+            flex-shrink: 2;
+            flex-basis: 300px;
+        }*/
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item-1">Elemento 1</div>
+        <div class="item-2">Elemento 2</div>
+        <div class="item-3">Elemento 3</div>
+        <div class="item-4">Elemento 4</div>
+        <div class="item-5">Elemento 5</div>
+        <div class="item-6">Elemento 6</div>
+        <div class="item-7">Elemento 7</div>
+        <div class="item-8">Elemento 8</div>
+        <div class="item-9">Elemento 9</div>
+        <div class="item-10">Elemento 10</div>
+        <div class="item-11">Elemento 11</div>
+    </div>
+</body>
+
+</html>
