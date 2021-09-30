@@ -1,0 +1,94 @@
+@use 'header'; // Módulo
+$fuente: sans-serif,
+Helvetica,
+Arial;
+$fondo: #ccc;
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: $fondo;
+    font-family: $fuente;
+}
+
+// Anidación
+.box {
+    border: 1px solid #333;
+    padding: 20px;
+    margin: 0px auto;
+    h1 {
+        color: red;
+    }
+    p {
+        color: blue;
+    }
+    .date {
+        color: gray;
+        .author {
+            color: green;
+            padding: 10px;
+        }
+    }
+}
+
+// Mixins - funciones
+@mixin setBorder($border-color) {
+    border: 3px solid $border-color;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+}
+
+.box {
+    @include setBorder(green);
+}
+
+.listado {
+    @include setBorder(blue);
+}
+
+%alert {
+    border: 1px solid gray;
+    background-color: lightsalmon;
+    color: white;
+    padding: 10px;
+    width: 80%;
+    margin: 0px auto;
+}
+
+.alert {
+    @extend %alert;
+}
+
+.alert-danger {
+    @extend %alert;
+    background-color: red;
+}
+
+// Operadores
+$pixels: 15px;
+h1 {
+    font-size: 20px + $pixels;
+}
+
+// condicionales
+h1 {
+    @if $fondo==#ccc {
+        color: yellow;
+    }
+    @else if $fondo==black {
+        color: lightskyblue;
+    }
+    @else {
+        color: pink
+    }
+}
+
+// bucles
+$contador: 1;
+@for $contador from 1 through 10 {
+    .listado ul li:nth-child(#{$contador}) {
+        font-size: $contador * 2px;
+    }
+}
